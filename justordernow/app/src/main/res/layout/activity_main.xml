@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars = "vertical"
+    android:fillViewport="true"
+    android:background="@drawable/coffee"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="tumblrr.utd.com.justordernow.MainActivity">
+
+
+        <EditText
+            android:id="@+id/name_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name"
+            android:inputType="textCapWords"/>
+
+        <EditText
+            android:id="@+id/email_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:inputType="textCapWords"/>
+
+        <TextView
+            android:text="@string/toppings"
+            style = "@style/HeaderTextStyle"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginTop="16dp"
+            android:layout_margin="8dp"/>
+
+        <CheckBox
+            android:id="@+id/whipped_cream_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:paddingLeft="24dp"
+            android:text="@string/whipped_cream"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/chocolate_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:paddingLeft="24dp"
+            android:text="@string/chocolate"
+            android:textSize="16sp" />
+
+        <TextView
+            android:text="@string/quantity"
+            android:paddingTop="16sp"
+            android:textColor="@color/colorPrimaryDark"
+            style="@style/HeaderTextStyle"
+            android:layout_margin="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:context="tumblrr.utd.com.justordernow.MainActivity">
+
+            <Button
+                android:id="@+id/decrement"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="-"
+                android:layout_margin="8dp"
+                android:onClick="decrement"/>
+
+            <TextView
+                android:id="@+id/quantity_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_red_light"
+                android:text="@string/initial_quantity_value"
+                android:textSize="16sp"
+                android:layout_margin="8dp" />
+
+            <Button
+                android:id="@+id/increment"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="+"
+                android:layout_margin="8dp"
+                android:onClick="increment"/>
+
+        </LinearLayout>
+        <TextView
+            android:text="Order Summary"
+            style="@style/HeaderTextStyle"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_margin="8dp"/>
+
+        <TextView
+            android:id="@+id/order_summary_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_red_light"
+            android:text="$0"
+            android:textSize="16sp"
+            android:layout_margin="8dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/order"
+            android:layout_margin="8dp"
+            android:onClick="submitOrder"/>
+
+    </LinearLayout>
+</ScrollView>
